@@ -1,0 +1,9 @@
+<%= partial :header, locals: {heading: 'Strava Example'} %>
+<h2>Last activity</h2>
+<%= partial :fields, locals: {fields: {
+		name: @parsed_json.first['name'],
+		type: @parsed_json.first['type'],
+		start_date: @parsed_json.first['start_date'],
+		location_city: @parsed_json.first['location_city']
+	}} %>
+<%= partial :raw_json, locals: {json: @json} %>

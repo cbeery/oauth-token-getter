@@ -1,0 +1,14 @@
+<p>
+  <button class="btn btn-light btn-sm" type="button" data-toggle="collapse" data-target="#rawresults" aria-expanded="false" aria-controls="rawresults">
+    Raw JSON results
+  </button>
+</p>
+<div class="collapse" id="rawresults">
+  <div class="card bg-light">
+		<div class="card-block">
+			<pre>
+			<%= json.force_encoding("UTF-8") %>
+			</pre>
+		</div>
+	</div>
+</div>
