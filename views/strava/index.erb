@@ -1,6 +1,6 @@
 <%= partial :header, locals: {heading: 'Strava Callback'} %>
-<%= partial :token, locals: {token: @parsed_json['access_token']} %>
-<%= partial :fields, locals: {fields: {username: @parsed_json['athlete']['username'], email: @parsed_json['athlete']['email']}} %>
+<%= partial :fields, locals: {fields: {token: @parsed_json['access_token']}} %>
+<%= partial :data, locals: {data: {username: @parsed_json['athlete']['username'], email: @parsed_json['athlete']['email']}} %>
 
 <p><a href="/strava/example?token=<%= @parsed_json['access_token'] %>">Example</a></p>
 
