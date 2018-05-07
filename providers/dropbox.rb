@@ -2,6 +2,9 @@
 
 # http://localhost:9292/dropbox/callback
 
+DROPBOX_CLIENT_ID = ENV['DROPBOX_CLIENT_ID']
+DROPBOX_CLIENT_SECRET = ENV['DROPBOX_CLIENT_SECRET']
+
 get '/dropbox/authorize' do
 	url = "https://www.dropbox.com/oauth2/authorize?client_id=#{DROPBOX_CLIENT_ID}&response_type=code&redirect_uri=#{url('/dropbox/callback')}&force_reapprove=false"
 	redirect to(url)

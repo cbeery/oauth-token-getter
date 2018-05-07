@@ -1,6 +1,9 @@
 ### Strava
 # https://www.strava.com/settings/api
 
+STRAVA_CLIENT_ID = ENV['STRAVA_CLIENT_ID']
+STRAVA_CLIENT_SECRET = ENV['STRAVA_CLIENT_SECRET']
+
 get '/strava/authorize' do
 	# url = "https://www.strava.com/oauth/authorize?client_id=#{STRAVA_CLIENT_ID}&response_type=code&redirect_uri=#{url('/strava/callback')}&approval_prompt=force"
 	url = "https://www.strava.com/oauth/authorize?client_id=#{STRAVA_CLIENT_ID}&response_type=code&redirect_uri=#{url('/strava/callback')}"

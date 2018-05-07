@@ -1,0 +1,7 @@
+<%= partial :header, locals: {heading: 'Instagram Callback'} %>
+
+<%= partial :fields, locals: {fields: {token: @parsed_json['access_token'], user_id: @parsed_json['user']['id']}} %>
+
+<p><a href="/instagram/example?token=<%= @parsed_json['access_token'] %>">Example</a></p>
+
+<%= partial :raw_json, locals: {json: @json} %>

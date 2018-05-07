@@ -6,10 +6,6 @@ require 'json'
 require 'net/http'
 
 # ENV
-STRAVA_CLIENT_ID = ENV['STRAVA_CLIENT_ID']
-STRAVA_CLIENT_SECRET = ENV['STRAVA_CLIENT_SECRET']
-DROPBOX_CLIENT_ID = ENV['DROPBOX_CLIENT_ID']
-DROPBOX_CLIENT_SECRET = ENV['DROPBOX_CLIENT_SECRET']
 
 # Sinatra partial config
 set :partial_template_engine, :erb
@@ -25,6 +21,7 @@ end
 # Resources / Providers
 load 'providers/strava.rb'
 load 'providers/dropbox.rb'
+load 'providers/instagram.rb'
 
 private
 
