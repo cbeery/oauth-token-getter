@@ -4,6 +4,7 @@ require 'sinatra/partial'
 require 'sass'
 require 'json'
 require 'net/http'
+require 'signet/oauth_2/client' # For Google OAuth
 
 # ENV
 
@@ -22,6 +23,7 @@ end
 load 'providers/strava.rb'
 load 'providers/dropbox.rb'
 load 'providers/instagram.rb'
+load 'providers/google_drive.rb'
 
 private
 
