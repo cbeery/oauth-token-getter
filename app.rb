@@ -24,6 +24,7 @@ load 'providers/strava.rb'
 load 'providers/dropbox.rb'
 load 'providers/instagram.rb'
 load 'providers/google_drive.rb'
+load 'providers/google_drive_cb.rb'
 
 private
 
