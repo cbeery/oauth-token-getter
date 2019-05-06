@@ -26,6 +26,7 @@ load 'providers/instagram.rb'
 load 'providers/google_drive.rb'
 load 'providers/google_drive_cb.rb'
 load 'providers/box.rb'
+load 'providers/foursquare.rb'
 
 private
 

@@ -1,0 +1,8 @@
+<%= partial :header, locals: {heading: 'Foursquare Example'} %>
+
+<h2>User</h2>
+<%= partial :data, locals: {data: {
+		email: @parsed_json['response']['user']['contact']['email']
+	}} %>
+
+<%= partial :raw_json, locals: {json: @json} %>

@@ -1,0 +1,7 @@
+<%= partial :header, locals: {heading: 'Foursquare Callback'} %>
+<%= partial :fields, locals: {fields: {token: @token}} %>
+
+<p><a href="/foursquare/example?token=<%= @token %>">Example</a></p>
+
+<%= partial :raw_json, locals: {json: @json} %>
+
