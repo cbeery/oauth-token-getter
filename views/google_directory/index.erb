@@ -1,0 +1,3 @@
+<%= partial :header, locals: {heading: 'Google Directory Callback'} %>
+<%= partial :fields, locals: {fields: {access_token: @parsed_json['access_token'], refresh_token: @parsed_json['refresh_token']}} %>
+<%= partial :raw_json, locals: {json: @json} %>
