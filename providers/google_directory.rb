@@ -4,7 +4,8 @@ GOOGLE_DIRECTORY_CLIENT_ID = ENV['GOOGLE_DIRECTORY_CLIENT_ID']
 GOOGLE_DIRECTORY_CLIENT_SECRET = ENV['GOOGLE_DIRECTORY_CLIENT_SECRET']
 
 get '/google_directory/authorize' do
-	url = "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=#{GOOGLE_DIRECTORY_CLIENT_ID}&redirect_uri=#{url('/google_directory/callback')}&response_type=code&scope=https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.user"
+	# url = "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=#{GOOGLE_DIRECTORY_CLIENT_ID}&redirect_uri=#{url('/google_directory/callback')}&response_type=code&scope=https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.user"
+	url = "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force&client_id=#{GOOGLE_DIRECTORY_CLIENT_ID}&redirect_uri=#{url('/google_directory/callback')}&response_type=code&scope=https://www.googleapis.com/auth/admin.directory.user"
 	redirect to(url)
 
 end
