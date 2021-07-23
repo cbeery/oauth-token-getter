@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.4.2"
+ruby "2.4.5"
 
 gem 'bundler'
 # https://github.com/cbeery/oauth-token-getter/network/alert/Gemfile.lock/sinatra/open

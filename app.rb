@@ -28,6 +28,7 @@ load 'providers/google_drive_cb.rb'
 load 'providers/box.rb'
 load 'providers/foursquare.rb'
 load 'providers/google_directory.rb'
+load 'providers/dropbox_cb_affy.rb'
 
 private
 

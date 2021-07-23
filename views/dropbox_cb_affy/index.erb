@@ -1,0 +1,7 @@
+<%= partial :header, locals: {heading: 'Dropbox CB Affy Callback'} %>
+<%= partial :fields, locals: {fields: {token: @parsed_json['access_token'], account_id: @parsed_json['account_id'], team_id: @parsed_json['team_id']}} %>
+
+<p><a href="/dropbox_cb_affy/example?token=<%= @parsed_json['access_token'] %>&team_id=<%= @parsed_json['team_id'] %>">Example</a></p>
+
+<%= partial :raw_json, locals: {json: @json} %>
+

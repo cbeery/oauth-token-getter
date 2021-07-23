@@ -1,0 +1,11 @@
+<%= partial :header, locals: {heading: 'Dropbox CB Affy Example'} %>
+
+<h2>Account</h2>
+<%= partial :data, locals: {data: {
+		account_id: @parsed_json['account_id'],
+		display_name: @parsed_json['name']['display_name'],
+		email: @parsed_json['email']
+	}} %>
+
+
+<%= partial :raw_json, locals: {json: @json} %>
