@@ -1,0 +1,9 @@
+<%= partial :header, locals: {heading: 'Spotify Callback'} %>
+<%= partial :fields, locals: {fields: {access_token: @parsed_json['access_token'], refresh_token: @parsed_json['refresh_token']}} %>
+<%# partial :data, locals: {data: {username: @parsed_json['athlete']['username'], email: @parsed_json['athlete']['email']}} %>
+
+<p><a href="/spotify/refresh_token?refresh_token=<%= @parsed_json['refresh_token'] %>">Refresh token</a></p>
+<p><a href="/spotify/example?token=<%= @parsed_json['access_token'] %>">Example</a></p>
+
+<%= partial :raw_json, locals: {json: @json} %>
+

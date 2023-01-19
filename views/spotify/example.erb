@@ -1,0 +1,8 @@
+<%= partial :header, locals: {heading: 'Spotify Example'} %>
+<h2>Spotify /me</h2>
+<%= partial :data, locals: {data: {
+		name: @parsed_json['display_name'],
+		email: @parsed_json['email']
+	}} %>
+<img src="<%= @parsed_json['images'].first['url'] %>" class="img img-responsive img-thumbnail">
+<%= partial :raw_json, locals: {json: @json} %>
